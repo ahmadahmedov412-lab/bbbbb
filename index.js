@@ -14,10 +14,11 @@ app.use(express.json());
 const cors = require('cors');
 app.use(
   cors({
-    origin: "*",
+    origin: ["http://localhost:5173", "https://mihlievs.uz/"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type"],
   })
 );
-
 
 const imageSchema = new mongoose.Schema({
   filename: String,
