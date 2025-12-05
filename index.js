@@ -12,11 +12,18 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 const cors = require('cors');
-app.use(
-  cors({
-    origin: "*",
-  })
-);
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "http://127.0.0.1:5173",
+    "https://mihlievs.uz"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true
+}));
+
 
 
 const imageSchema = new mongoose.Schema({
