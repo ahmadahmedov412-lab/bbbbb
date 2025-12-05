@@ -118,7 +118,7 @@ const swaggerOptions = {
         url: `http://localhost:${process.env.PORT || 10000}`,
       },
       {
-        url: 'https://bbbbb-z4hz.onrender.com',
+        url: 'https://backend-mihlievs.onrender.com',
         description: 'Production',
       },
       {
